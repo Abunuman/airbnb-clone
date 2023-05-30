@@ -27,6 +27,18 @@ app.use(cors({
   credentials: true,
   origin: 'http://127.0.0.1:5173',
 }));
+console.log(process.env.MONGO_URL)
+mongoose.set("strictQuery", true);
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("connected to database");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+
 
 async function uploadToS3(path, originalFilename, mimetype) {
   const client = new S3Client({
