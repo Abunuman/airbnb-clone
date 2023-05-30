@@ -1,5 +1,0 @@
-tasks:
-  - name: Environment variable for MongoDB
-    env:
-      MONGO_URL: "mongodb+srv://Group8-Capstone:42FiRTHYm0ByMnVu@airbnb-cluster.whpb7xd.mongodb.net/?retryWrites=true&w=majority"
-    command: echo "$MONGO_URL"
